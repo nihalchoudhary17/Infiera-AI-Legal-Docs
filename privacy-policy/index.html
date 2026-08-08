@@ -1,219 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | AI Infera</title>
+    <title>Privacy Policy - Infiera AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-        .serif-text {
-            font-family: 'Lora', serif;
-        }
-        /* Smooth fade in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal as a modern AI accent
+                            600: '#0d9488',
+                            900: '#134e4a',
+                            dark: '#0f172a' // Slate for deep, trustworthy darks
+                        }
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                color: '#334155', // slate-700 for better readability than pure black
+                                h1: { color: '#0f172a' },
+                                h2: { color: '#0f172a', fontWeight: '600' },
+                                h3: { color: '#1e293b', fontWeight: '600' },
+                                strong: { color: '#0f172a' },
+                                a: { color: '#14b8a6', '&:hover': { color: '#0d9488' } },
+                            }
+                        }
+                    }
+                }
             }
         }
-        /* Custom list style for legal points */
-        ul.legal-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
+    </script>
+    <style>
+        /* Custom styles for the table of contents active state */
+        .toc-link.active {
+            color: #14b8a6;
+            font-weight: 600;
+            border-left-color: #14b8a6;
         }
-        ul.legal-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #9CA3AF; /* gray-400 */
+        
+        /* Subtle custom scrollbar for the sidebar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-[#FAFAF9] text-[#282828] antialiased selection:bg-gray-200 selection:text-black">
+<body class="font-sans antialiased bg-gray-50 text-slate-700 min-h-screen flex flex-col">
 
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <div class="bg-brand-dark text-white py-16 sm:py-24 relative overflow-hidden">
+        <!-- Abstract background decoration -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg class="absolute top-1/2 left-0 w-64 h-64 -translate-y-1/2 -translate-x-1/2 text-brand-500" fill="currentColor" viewBox="0 0 100 100">
+                <rect width="100" height="100" transform="rotate(45 50 50)"></rect>
+            </svg>
+        </div>
         
-        <!-- Header -->
-        <header class="mb-12 fade-in" style="animation-delay: 0.1s;">
-            <p class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Legal</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Privacy Policy</h1>
-            <p class="text-gray-500 font-light">Effective Date: 15/12/2025</p>
-        </header>
-
-        <!-- Intro -->
-        <section class="mb-12 fade-in" style="animation-delay: 0.2s;">
-            <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                This Privacy Policy explains how information is handled when you use AI Infera (“we,” “our,” or “us”). AI Infera is a simple multi‑AI chatbot that allows users to interact with multiple AI models for general information and assistance.
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-brand-500 font-semibold tracking-wide uppercase text-sm mb-4 block">Legal Documentation</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">Privacy Policy</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">
+                How we collect, use, and protect your data across our AI products and services.
             </p>
-            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <p class="text-gray-800 font-medium">
-                    AI Infera does not analyze, track, optimize, or grow your business, and it does not collect data for training, profiling, or decision‑making systems.
-                </p>
+        </div>
+    </div>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row gap-12 relative">
+        
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+            <div class="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar pr-4">
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-4">Contents</h4>
+                <nav class="flex flex-col space-y-1 text-sm text-slate-600 border-l border-gray-200">
+                    <a href="#introduction" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">1. Introduction</a>
+                    <a href="#information-we-collect" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">2. Information We Collect</a>
+                    <a href="#how-we-use-information" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">3. How We Use Information</a>
+                    <a href="#ai-third-party-services" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">4. AI & Third-Party AI Services</a>
+                    <a href="#how-we-share" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">5. How We Share Information</a>
+                    <a href="#data-retention" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">6. Data Retention</a>
+                    <a href="#data-security" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">7. Data Security</a>
+                    <a href="#cookies-analytics" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">8. Cookies & Analytics</a>
+                    <a href="#user-rights" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">9. User Rights & Choices</a>
+                    <a href="#childrens-privacy" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">10. Children's Privacy</a>
+                    <a href="#international-transfers" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">11. International Data Transfers</a>
+                    <a href="#third-party-links" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">12. Third-Party Links</a>
+                    <a href="#changes" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">13. Changes to Policy</a>
+                    <a href="#contact" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">14. Contact Us</a>
+                </nav>
             </div>
-            <p class="mt-4 text-sm text-gray-500 italic">By using AI Infera, you agree to this Privacy Policy.</p>
-        </section>
+        </aside>
 
-        <hr class="border-gray-200 mb-12 fade-in" style="animation-delay: 0.3s;">
-
-        <!-- 1. What AI Infera Is -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.3s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">1. What AI Infera Is</h2>
-            <ul class="legal-list text-gray-700">
-                <li>AI Infera is a chat-based interface to access multiple AI models.</li>
-                <li>It provides general informational responses only.</li>
-                <li>It does not provide professional, financial, legal, medical, or business advice.</li>
-                <li>It does not make decisions on your behalf.</li>
-            </ul>
-            <p class="mt-4 text-gray-800 font-medium">You are always responsible for how you use the responses.</p>
-        </section>
-
-        <!-- 2. Information We Collect -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">2. Information We Collect</h2>
-            <p class="text-gray-700 mb-4">AI Infera processes only the text you voluntarily type into the chat.</p>
+        <!-- Policy Content -->
+        <div class="flex-grow max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100 relative">
             
-            <h3 class="text-md font-semibold text-gray-800 mb-2">2.1 Submitted Information</h3>
-            <ul class="legal-list text-gray-700 mb-6">
-                <li>Prompts and messages you submit.</li>
-                <li>Optional contact details (only if you explicitly provide them).</li>
-                <li>We do not require personal details to use the chatbot.</li>
-            </ul>
-
-            <h3 class="text-md font-semibold text-gray-800 mb-2">2.2 Automatically Collected Information</h3>
-            <p class="text-gray-700 mb-2">For basic functionality and security, minimal technical data may be collected:</p>
-            <ul class="legal-list text-gray-700">
-                <li>Device and browser type.</li>
-                <li>IP address (temporary or masked).</li>
-                <li>Basic usage logs (error logs, session timing).</li>
-            </ul>
-            <p class="mt-2 text-sm text-gray-500">This data is used only to keep the service running and secure.</p>
-        </section>
-
-        <!-- 3. What We Do NOT Do -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">3. What We Do NOT Do</h2>
-            <p class="text-gray-700 mb-4">To avoid confusion, AI Infera explicitly does not:</p>
-            <ul class="legal-list text-gray-700 space-y-1">
-                <li>Track your behavior across websites.</li>
-                <li>Analyze or optimize your business.</li>
-                <li>Store or build profiles about users.</li>
-                <li>Sell or rent user data.</li>
-                <li>Use your data to train AI models.</li>
-                <li>Guarantee accuracy, results, or outcomes.</li>
-            </ul>
-        </section>
-
-        <!-- 4. Use of Third-Party AI Models -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">4. Use of Third‑Party AI Models</h2>
-            <p class="text-gray-700 mb-4">AI Infera sends your prompts to third‑party AI providers to generate responses.</p>
-            <div class="bg-gray-50 border-l-4 border-gray-300 p-4 mb-4">
-                <p class="font-medium text-gray-900 mb-2">Important points:</p>
-                <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>Your inputs may be processed by those providers according to their own privacy policies.</li>
-                    <li>AI Infera has no control over how third‑party AI models internally process data.</li>
-                    <li>Responses may be incorrect, outdated, or incomplete.</li>
-                </ul>
-            </div>
-            <p class="text-gray-700">You should independently verify important information.</p>
-        </section>
-
-        <!-- 5. Data Storage -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">5. Data Storage and Retention</h2>
-            <ul class="legal-list text-gray-700">
-                <li>Chat inputs may be temporarily stored for system performance or debugging.</li>
-                <li>We do not intentionally retain long‑term chat histories.</li>
-                <li>You may stop using the service at any time.</li>
-                <li>We make reasonable efforts to minimize data storage.</li>
-            </ul>
-        </section>
-
-        <!-- 6. Cookies -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.6s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">6. Cookies and Tracking</h2>
-            <p class="text-gray-700 mb-4">AI Infera uses only essential cookies (if any) required for basic operation.</p>
-            <p class="text-gray-800 font-medium mb-2">We do not use:</p>
-            <ul class="list-none pl-0 text-gray-700 flex flex-wrap gap-2">
-                <li class="bg-gray-100 px-3 py-1 rounded-full text-sm">Advertising cookies</li>
-                <li class="bg-gray-100 px-3 py-1 rounded-full text-sm">Behavioral tracking</li>
-                <li class="bg-gray-100 px-3 py-1 rounded-full text-sm">Cross‑site tracking</li>
-            </ul>
-        </section>
-
-        <!-- 7, 8, 9, 10 Combined for flow -->
-        <section class="mb-10 fade-in space-y-8" style="animation-delay: 0.6s;">
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">7. Your Responsibilities</h2>
-                <ul class="legal-list text-gray-700">
-                    <li>You will not enter illegal, harmful, or confidential information.</li>
-                    <li>You understand AI responses are not facts or guarantees.</li>
-                    <li>You are fully responsible for actions taken based on responses.</li>
-                </ul>
-                <p class="text-sm text-gray-500 mt-2">AI Infera is not liable for any loss, damage, or consequences resulting from use of the chatbot.</p>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">8. Children’s Privacy</h2>
-                <p class="text-gray-700">AI Infera is not intended for users under 18 years of age. We do not knowingly collect data from minors.</p>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">9. Limitation of Liability</h2>
-                <p class="text-gray-700 mb-2">To the maximum extent permitted by law:</p>
-                <ul class="legal-list text-gray-700">
-                    <li>AI Infera is provided on an “as‑is” basis.</li>
-                    <li>We make no warranties about accuracy or reliability.</li>
-                    <li>We are not responsible for decisions, actions, or outcomes based on chatbot responses.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">10. Changes to This Privacy Policy</h2>
-                <p class="text-gray-700">This Privacy Policy may be updated occasionally. Continued use of AI Infera means you accept the updated policy.</p>
-            </div>
-        </section>
-
-        <hr class="border-gray-200 mb-10 fade-in" style="animation-delay: 0.7s;">
-
-        <!-- 11. Contact & Summary -->
-        <section class="fade-in mb-16" style="animation-delay: 0.7s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">11. Contact</h2>
-            <p class="text-gray-700 mb-2">If you have questions about this Privacy Policy, you may contact:</p>
-            <a href="mailto:contact@nihalchoudhary.site" class="text-lg font-medium text-black border-b-2 border-transparent hover:border-black transition-all">
-                contact@nihalchoudhary.site
-            </a>
-        </section>
-
-        <!-- Simple Summary Box -->
-        <div class="bg-[#F3F4F6] p-8 rounded-xl fade-in" style="animation-delay: 0.8s;">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Simple Summary</h3>
-            <p class="text-gray-700 leading-relaxed">
-                AI Infera is just a multi‑AI chat tool. We don’t track you, we don’t grow your business, we don’t sell your data, and we don’t make decisions for you.
+            <p class="text-sm text-slate-500 mb-8 border-b border-gray-100 pb-4">
+                <strong>Last Updated:</strong> <span id="last-updated-date">[DATE]</span>
             </p>
-        </div>
 
-        <div class="mt-16 text-center text-sm text-gray-400 font-light italic fade-in" style="animation-delay: 0.9s;">
-            AI Infera helps you work with AI in a simpler, more human way.
-        </div>
+            <div class="prose prose-slate prose-headings:font-semibold prose-a:text-brand-600 hover:prose-a:text-brand-700 max-w-none space-y-8">
+                
+                <section id="introduction" class="scroll-mt-24">
+                    <h2 class="text-2xl text-brand-dark mb-4">1. Introduction</h2>
+                    <p>Welcome to Infiera AI ("Infiera AI," "we," "our," or "us"). Infiera AI is an AI software company that builds and provides AI-powered tools designed to help businesses grow, automate workflows, and improve performance.</p>
+                    <p>This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our websites, use our software products (such as PinVelocity AI), or interact with our services.</p>
+                    <p>By using Infiera AI services, you agree to the practices described in this Privacy Policy.</p>
+                </section>
 
+                <section id="information-we-collect" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">2. Information We Collect</h2>
+                    <p>We collect different types of information depending on how you interact with our services.</p>
+                    
+                    <h3 class="text-lg mt-6 mb-3">Information you provide directly</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Company name (if provided)</li>
+                        <li>Account credentials</li>
+                        <li>Support messages and communications</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Account information</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Login details</li>
+                        <li>Subscription plan details</li>
+                        <li>Account settings and preferences</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Contact information</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Email address</li>
+                        <li>Any information submitted through contact forms or support channels</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Payment and billing information</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Billing name and address</li>
+                        <li>Payment method details (processed securely via third-party payment providers)</li>
+                        <li>Transaction history</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Information submitted through our software</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Inputs provided to AI tools</li>
+                        <li>Prompts, requests, or content submitted for generation</li>
+                        <li>Product or business URLs (e.g., ecommerce links for PinVelocity AI)</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Technical and device information</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>IP address</li>
+                        <li>Browser type</li>
+                        <li>Device type</li>
+                        <li>Operating system</li>
+                        <li>Access times and referring URLs</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Usage and analytics information</h3>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Pages visited</li>
+                        <li>Features used</li>
+                        <li>Interaction data</li>
+                        <li>Performance and diagnostic data</li>
+                    </ul>
+
+                    <h3 class="text-lg mt-6 mb-3">Cookies and similar technologies</h3>
+                    <p>We use cookies and similar tracking technologies to improve user experience, analyze usage, and maintain platform functionality.</p>
+                </section>
+
+                <section id="how-we-use-information" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">3. How We Use Information</h2>
+                    <p>We use collected information to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Provide and operate our products and services</li>
+                        <li>Generate AI-powered outputs requested by users</li>
+                        <li>Create and manage user accounts</li>
+                        <li>Process payments and subscriptions</li>
+                        <li>Provide customer support and respond to inquiries</li>
+                        <li>Improve our products, features, and user experience</li>
+                        <li>Detect, prevent, and address fraud, abuse, and security issues</li>
+                        <li>Communicate important updates about accounts or services</li>
+                        <li>Send marketing communications where legally permitted</li>
+                        <li>Comply with legal and regulatory obligations</li>
+                    </ul>
+                </section>
+
+                <section id="ai-third-party-services" class="scroll-mt-24 pt-4 border-t border-gray-50 bg-brand-50 p-6 rounded-xl border border-brand-100 my-8">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-white p-2 rounded-lg shadow-sm shrink-0">
+                            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-xl text-brand-dark mb-2 font-semibold">4. AI and Third-Party AI Services</h2>
+                            <p class="text-sm">Infiera AI provides AI-powered software that may rely on third-party AI models, APIs, cloud infrastructure, and related technologies.</p>
+                            <p class="text-sm mt-2">In some cases, data you submit may be processed by third-party service providers strictly for the purpose of delivering AI functionality, improving performance, or maintaining system reliability.</p>
+                            <p class="text-sm mt-2 font-medium">These providers may include:</p>
+                            <ul class="list-disc pl-5 mt-2 text-sm grid grid-cols-1 sm:grid-cols-2 gap-1">
+                                <li>AI model providers</li>
+                                <li>Cloud hosting services</li>
+                                <li>Data processing infrastructure</li>
+                                <li>Analytics and monitoring tools</li>
+                                <li>Payment processors</li>
+                            </ul>
+                            <p class="text-sm mt-3 italic">We only share information with these providers as necessary to operate our services and in accordance with applicable agreements and laws.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="how-we-share" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">5. How We Share Information</h2>
+                    <p>We may share information with the following categories of third parties:</p>
+                    <ul class="list-disc pl-6 space-y-1 mt-4 mb-4">
+                        <li>Technology and hosting providers</li>
+                        <li>AI service providers</li>
+                        <li>Payment processors</li>
+                        <li>Analytics providers</li>
+                        <li>Customer support tools and services</li>
+                        <li>Legal or regulatory authorities when required by law</li>
+                        <li>Business partners in connection with a merger, acquisition, financing, or sale of assets</li>
+                    </ul>
+                    <div class="inline-block px-4 py-2 bg-slate-100 rounded-md font-medium text-slate-800">
+                        We do not sell personal information.
+                    </div>
+                </section>
+
+                <section id="data-retention" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">6. Data Retention</h2>
+                    <p>We retain personal information only for as long as reasonably necessary to fulfill the purposes described in this Privacy Policy, including providing services, complying with legal obligations, resolving disputes, and enforcing agreements.</p>
+                    <p>When information is no longer needed, we take reasonable steps to delete or anonymize it.</p>
+                </section>
+
+                <section id="data-security" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">7. Data Security</h2>
+                    <p>We implement reasonable technical and organizational measures to help protect your personal information from unauthorized access, loss, misuse, or alteration.</p>
+                    <p>However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+                </section>
+
+                <section id="cookies-analytics" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">8. Cookies and Analytics</h2>
+                    <p>Infiera AI uses cookies and similar technologies to:</p>
+                    <ul class="list-disc pl-6 space-y-1 mt-4">
+                        <li>Keep users logged in</li>
+                        <li>Remember preferences</li>
+                        <li>Analyze platform usage</li>
+                        <li>Improve performance and user experience</li>
+                    </ul>
+                    <p class="mt-4">You may control or disable cookies through your browser settings, though some features may not function properly if cookies are disabled.</p>
+                </section>
+
+                <section id="user-rights" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">9. User Rights and Choices</h2>
+                    <p>Depending on your location and applicable laws, you may have rights regarding your personal information, including:</p>
+                    <ul class="list-disc pl-6 space-y-1 mt-4">
+                        <li>Accessing your personal data</li>
+                        <li>Correcting inaccurate information</li>
+                        <li>Requesting deletion of your data</li>
+                        <li>Restricting or objecting to certain processing</li>
+                        <li>Data portability (where applicable)</li>
+                        <li>Withdrawing consent (where processing is based on consent)</li>
+                        <li>Opting out of marketing communications</li>
+                    </ul>
+                    <p class="mt-4">To exercise these rights, contact us using the details provided below.</p>
+                </section>
+
+                <section id="childrens-privacy" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">10. Children's Privacy</h2>
+                    <p>Infiera AI services are not intended for children under the age required by applicable law in your jurisdiction.</p>
+                    <p>We do not knowingly collect personal information from children. If we become aware that such data has been collected, we will take appropriate steps to delete it.</p>
+                </section>
+
+                <section id="international-transfers" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">11. International Data Transfers</h2>
+                    <p>Infiera AI and its service providers may process and store information in countries other than your own.</p>
+                    <p>These countries may have different data protection laws. Where required, we take appropriate measures to ensure your information is protected in accordance with applicable legal requirements.</p>
+                </section>
+
+                <section id="third-party-links" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">12. Third-Party Links and Services</h2>
+                    <p>Our services may contain links to third-party websites, tools, or services.</p>
+                    <p>We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing any personal information.</p>
+                </section>
+
+                <section id="changes" class="scroll-mt-24 pt-4 border-t border-gray-50">
+                    <h2 class="text-2xl text-brand-dark mb-4">13. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, or other factors.</p>
+                    <p>When we update the policy, we will revise the "Last Updated" date at the top of this page.</p>
+                </section>
+
+                <section id="contact" class="scroll-mt-24 pt-4 border-t border-gray-50 mb-12">
+                    <h2 class="text-2xl text-brand-dark mb-4">14. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy or how your data is handled, you can contact us:</p>
+                    
+                    <div class="mt-6 bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3">
+                            <div class="text-slate-500 font-medium text-sm">Company Name:</div>
+                            <div class="sm:col-span-2 font-medium"> Infiera AI </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Email:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="mailto:privacy@infiera.ai"> nihal.infieraai@gmail.com </a></div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Business Address:</div>
+                            <div class="sm:col-span-2"> Anand Bazar Matth Road Danapur Cantt, Patna, Bihar 801503 </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Phone Number:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="#"> +918210715571 </a></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
+    <script>
+        // Set dynamic dates
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            
+            // Set mock last updated date (e.g., today's date for template)
+            const lastUpdatedEl = document.getElementById('last-updated-date');
+            if (lastUpdatedEl) {
+                lastUpdatedEl.textContent = today.toLocaleDateString('en-US', dateOptions);
+            }
+
+            // Simple Intersection Observer for Table of Contents highlighting
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px', // Adjust firing point
+                threshold: 0
+            };
+
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'border-l-brand-500');
+                            link.classList.add('border-transparent');
+                        });
+                        
+                        // Add active class to corresponding link
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active', 'border-l-brand-500');
+                            activeLink.classList.remove('border-transparent');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
