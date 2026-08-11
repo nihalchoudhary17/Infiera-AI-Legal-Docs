@@ -1,240 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | AI Infera</title>
+    <title>Terms of Use - Infiera AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-        .serif-text {
-            font-family: 'Lora', serif;
-        }
-        /* Smooth fade in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // AI Teal accent
+                            600: '#0d9488',
+                            900: '#134e4a',
+                            dark: '#0f172a' // Dark Slate
+                        }
+                    }
+                }
             }
         }
-        /* Custom bullet style for legal points */
-        ul.legal-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
+    </script>
+    <style>
+        .toc-link.active {
+            color: #14b8a6;
+            font-weight: 600;
+            border-left-color: #14b8a6;
         }
-        ul.legal-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #9CA3AF; /* gray-400 */
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-[#FAFAF9] text-[#282828] antialiased selection:bg-gray-200 selection:text-black">
+<body class="font-sans antialiased bg-gray-50 text-slate-700 min-h-screen flex flex-col">
 
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <div class="bg-brand-dark text-white py-16 sm:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg class="absolute top-1/2 left-0 w-64 h-64 -translate-y-1/2 -translate-x-1/2 text-brand-500" fill="currentColor" viewBox="0 0 100 100">
+                <rect width="100" height="100" transform="rotate(45 50 50)"></rect>
+            </svg>
+        </div>
         
-        <!-- Header -->
-        <header class="mb-12 fade-in" style="animation-delay: 0.1s;">
-            <p class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Legal</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Terms of Use</h1>
-            <p class="text-gray-500 font-light">Effective Date: 15/12/2025</p>
-        </header>
-
-        <!-- Intro -->
-        <section class="mb-12 fade-in" style="animation-delay: 0.2s;">
-            <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                These Terms of Use (“Terms”) govern your access to and use of AI Infera (the “Service”). By accessing or using AI Infera, you agree to be bound by these Terms. If you do not agree, do not use the Service.
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-brand-500 font-semibold tracking-wide uppercase text-sm mb-4 block">Terms & Conditions</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">Terms of Use</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">
+                Rules, guidelines, user obligations, and service terms governing your access to Infiera AI software products and platform services.
             </p>
-        </section>
+        </div>
+    </div>
 
-        <hr class="border-gray-200 mb-12 fade-in" style="animation-delay: 0.3s;">
-
-        <!-- 1. Description of the Service -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.3s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">1. Description of the Service</h2>
-            <p class="text-gray-700 mb-3">AI Infera is a simple multi-AI chatbot that allows users to interact with responses generated by third-party AI models.</p>
-            <ul class="legal-list text-gray-700">
-                <li>The Service provides general informational content only.</li>
-                <li>It does not provide advice, instructions, or guarantees.</li>
-                <li>It does not make decisions on behalf of users.</li>
-            </ul>
-        </section>
-
-        <!-- 2. Eligibility -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">2. Eligibility</h2>
-            <p class="text-gray-700">You must be at least 18 years old to use AI Infera. By using the Service, you confirm that you meet this requirement.</p>
-        </section>
-
-        <!-- 3. User Responsibilities -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">3. User Responsibilities</h2>
-            <p class="text-gray-700 mb-3">By using AI Infera, you agree that you will:</p>
-            <ul class="legal-list text-gray-700">
-                <li>Use the Service lawfully and responsibly.</li>
-                <li>Not submit illegal, harmful, or confidential information.</li>
-                <li>Not rely on responses as professional or factual advice.</li>
-                <li>Independently verify important information.</li>
-            </ul>
-            <p class="text-gray-800 font-medium mt-3">You are solely responsible for all actions taken based on the Service.</p>
-        </section>
-
-        <!-- 4. Prohibited Uses -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">4. Prohibited Uses</h2>
-            <p class="text-gray-700 mb-3">You agree not to:</p>
-            <ul class="legal-list text-gray-700">
-                <li>Use AI Infera for illegal or fraudulent purposes.</li>
-                <li>Attempt to reverse engineer, abuse, or disrupt the Service.</li>
-                <li>Upload or share harmful, misleading, or malicious content.</li>
-                <li>Use the Service to violate the rights of others.</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic">We reserve the right to restrict or terminate access for misuse.</p>
-        </section>
-
-        <!-- 5. AI Limitations -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">5. AI Limitations</h2>
-            <p class="text-gray-700 mb-3">You acknowledge and agree that:</p>
-            <ul class="legal-list text-gray-700">
-                <li>AI responses may be inaccurate, incomplete, or outdated.</li>
-                <li>Outputs are generated automatically without human review.</li>
-                <li>AI Infera does not guarantee correctness or usefulness.</li>
-            </ul>
-            <p class="text-gray-800 font-medium mt-3">Use of the Service is entirely at your own risk.</p>
-        </section>
-
-        <!-- 6. Third-Party AI Providers -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.6s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">6. Third-Party AI Providers</h2>
-            <p class="text-gray-700 mb-3">AI Infera relies on third-party AI providers to generate responses.</p>
-            <ul class="legal-list text-gray-700">
-                <li>We do not control their internal systems or data processing.</li>
-                <li>Their use may be governed by separate terms and policies.</li>
-                <li>We are not responsible for third-party AI behavior or outputs.</li>
-            </ul>
-        </section>
-
-        <!-- 7. Intellectual Property -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.6s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">7. Intellectual Property</h2>
-            <p class="text-gray-700 mb-3">All branding, logos, and service-related content of AI Infera are owned by us.</p>
-            <ul class="legal-list text-gray-700">
-                <li>You may not copy, modify, or redistribute the Service without permission.</li>
-                <li>You retain ownership of the text you input into the chatbot.</li>
-            </ul>
-        </section>
-
-        <!-- 8. Availability & Changes -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.7s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">8. Availability, Changes, and Interface Updates</h2>
-            <div class="bg-white border border-gray-200 p-5 rounded-lg mb-4">
-                <p class="text-gray-700 mb-3">AI Infera may update, modify, or change its interface, features, prompts, integrations, or CSS / UI behavior at any time.</p>
-                <ul class="legal-list text-gray-600 text-sm">
-                    <li>Visual layout, styling, and appearance may change without notice.</li>
-                    <li>Features may be added, modified, limited, or removed.</li>
-                    <li>Such changes do not create any obligation or liability.</li>
-                </ul>
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row gap-12 relative">
+        
+        <!-- Sidebar Navigation (Desktop Table of Contents) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+            <div class="sticky top-12 max-h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar pr-4">
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-4">Contents</h4>
+                <nav class="flex flex-col space-y-1 text-sm text-slate-600 border-l border-gray-200">
+                    <a href="#acceptance" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">1. Acceptance of Terms</a>
+                    <a href="#eligibility" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">2. Eligibility & Accounts</a>
+                    <a href="#license-subscriptions" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">3. License & Subscriptions</a>
+                    <a href="#ai-services" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">4. AI Usage & Generated Content</a>
+                    <a href="#acceptable-use" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">5. Acceptable Use Policy</a>
+                    <a href="#third-party-integrations" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">6. Third-Party Integrations</a>
+                    <a href="#billing-cancellation" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">7. Fees, Billing & Refunds</a>
+                    <a href="#intellectual-property" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">8. Intellectual Property</a>
+                    <a href="#disclaimer-warranties" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">9. Disclaimer of Warranties</a>
+                    <a href="#limitation-liability" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">10. Limitation of Liability</a>
+                    <a href="#indemnification" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">11. Indemnification</a>
+                    <a href="#termination" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">12. Account Termination</a>
+                    <a href="#governing-law" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">13. Governing Law</a>
+                    <a href="#modifications" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">14. Changes to Terms</a>
+                    <a href="#contact" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">15. Contact Information</a>
+                </nav>
             </div>
-            <p class="text-gray-700 text-sm">Continued use of the Service after changes means you accept them. We may modify, suspend, or discontinue the Service at any time without notice. We are not liable for downtime, data loss, or service interruption.</p>
-        </section>
+        </aside>
 
-        <!-- 9. Automation & Account Responsibility -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.7s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">9. Automation, External Tools, and Account Responsibility</h2>
-            <div class="bg-red-50 border-l-4 border-red-300 p-5 rounded-r-lg">
-                <p class="text-gray-800 mb-3 text-sm">If you use AI Infera together with external automation tools, scripts, bots, extensions, or third-party software (including browser automation or API wrappers):</p>
-                <ul class="legal-list text-gray-700 text-sm">
-                    <li>You do so entirely at your own risk.</li>
-                    <li>AI Infera does not encourage, control, or manage such automation.</li>
-                    <li>You are solely responsible for complying with the terms of any third-party AI providers, platforms, or websites.</li>
-                </ul>
-                <p class="text-gray-900 font-semibold mt-3 text-sm">If your account with any AI provider, platform, website, or service is restricted, suspended, banned, rate-limited, or penalized due to automation, misuse, or policy violations, AI Infera has no responsibility or liability.</p>
-            </div>
-        </section>
-
-        <!-- 10. Limitation of Liability -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.8s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">10. Limitation of Liability</h2>
-            <p class="text-gray-700 mb-2">To the maximum extent permitted by law:</p>
-            <ul class="legal-list text-gray-700">
-                <li>AI Infera is provided on an “as-is” basis.</li>
-                <li>We disclaim all warranties, express or implied.</li>
-                <li>We are not liable for any losses, damages, bans, suspensions, data loss, or consequences.</li>
-                <li>This includes indirect, incidental, or consequential damages.</li>
-            </ul>
-        </section>
-
-        <!-- 11. Indemnification -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.8s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">11. Indemnification</h2>
-            <p class="text-gray-700 mb-3">You agree to indemnify and hold harmless AI Infera from any claims, damages, penalties, bans, or liabilities arising from:</p>
-            <ul class="legal-list text-gray-700">
-                <li>Your use of the Service.</li>
-                <li>Your use of automation or third-party tools with the Service.</li>
-                <li>Your violation of any third-party terms or policies.</li>
-                <li>Your misuse of AI-generated content.</li>
-            </ul>
-        </section>
-
-        <!-- 12, 13, 14 Combined -->
-        <section class="mb-10 fade-in space-y-8" style="animation-delay: 0.9s;">
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">12. Termination</h2>
-                <p class="text-gray-700">We may suspend or terminate your access to AI Infera at our sole discretion if these Terms are violated.</p>
-            </div>
+        <!-- Main Content Area -->
+        <div class="flex-grow max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100 relative">
             
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">13. Governing Law</h2>
-                <p class="text-gray-700">These Terms shall be governed by and interpreted in accordance with applicable laws, without regard to conflict of law principles.</p>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">14. Changes to These Terms</h2>
-                <p class="text-gray-700">We may update these Terms from time to time. Continued use of the Service means you accept the updated Terms.</p>
-            </div>
-        </section>
-
-        <hr class="border-gray-200 mb-10 fade-in" style="animation-delay: 1.0s;">
-
-        <!-- 15. Contact -->
-        <section class="fade-in mb-16" style="animation-delay: 1.0s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">15. Contact</h2>
-            <p class="text-gray-700 mb-2">If you have questions about these Terms, contact:</p>
-            <a href="mailto:contact@nihalchoudhary.site" class="text-lg font-medium text-black border-b-2 border-transparent hover:border-black transition-all">
-                contact@nihalchoudhary.site
-            </a>
-        </section>
-
-        <!-- Summary Box -->
-        <div class="bg-[#F3F4F6] p-8 rounded-xl fade-in" style="animation-delay: 1.1s;">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Plain Summary</h3>
-            <p class="text-gray-700 leading-relaxed">
-                AI Infera is a simple multi-AI chatbot. It gives information, not advice. You use it at your own risk, and you are responsible for what you do with the responses.
+            <p class="text-sm text-slate-500 mb-8 border-b border-gray-100 pb-4">
+                <strong>Last Updated:</strong> <span id="terms-last-updated">[DATE]</span>
             </p>
-        </div>
 
-        <div class="mt-16 text-center text-sm text-gray-400 font-light italic fade-in" style="animation-delay: 1.2s;">
-            AI Infera helps you work with AI in a simpler, more human way.
-        </div>
+            <div class="space-y-8 text-slate-700 leading-relaxed">
+                
+                <section id="acceptance" class="scroll-mt-12">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">1. Acceptance of Terms</h2>
+                    <p class="mb-3">These Terms of Use ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Infiera AI ("Infiera AI," "we," "us," or "our") governing your access to and use of our websites, software products (including PinVelocity AI and other current or future AI business tools), services, APIs, and applications (collectively, the "Services").</p>
+                    <p>By creating an account, clicking "I Agree," or accessing/using any part of our Services, you agree to be bound by these Terms and our Privacy Policy and Disclaimer. If you do not agree to all of these Terms, you may not access or use our Services.</p>
+                </section>
 
+                <section id="eligibility" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">2. Eligibility & Account Registration</h2>
+                    <p class="mb-3">To access certain features of Infiera AI software, you must create an account. By registering, you represent and warrant that:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-3">
+                        <li>You are at least 18 years of age or the legal age of majority in your jurisdiction.</li>
+                        <li>You have full power and legal authority to enter into this agreement on behalf of yourself or the entity/company you represent.</li>
+                        <li>All registration details you provide are accurate, truthful, current, and complete.</li>
+                    </ul>
+                    <p>You are solely responsible for maintaining the confidentiality of your account credentials and password. You accept full responsibility for all activities that occur under your account.</p>
+                </section>
+
+                <section id="license-subscriptions" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">3. License Grant & SaaS Subscription Terms</h2>
+                    <p class="mb-3">Subject to your compliance with these Terms and active subscription payment, Infiera AI grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use our software products solely for your internal business or commercial purposes.</p>
+                    <p class="mb-3">This license does not grant you ownership rights in our software or platform code. We reserve all rights not expressly granted to you under these Terms.</p>
+                </section>
+
+                <section id="ai-services" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">4. Artificial Intelligence Usage & Generated Content</h2>
+                    <p class="mb-3">Infiera AI provides AI-assisted productivity and content generation software. The following rules govern your use of our AI tools:</p>
+                    
+                    <div class="bg-brand-50 border-l-4 border-brand-500 p-4 rounded-r-lg my-4 text-brand-900 text-sm">
+                        <strong>Input & Output Rights:</strong> Subject to your compliance with these Terms, as between you and Infiera AI, you retain ownership of the input content (such as product URLs or brand text) you provide, and you own the generated output content produced specifically for you by our software.
+                    </div>
+
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li><strong>Human Review Required:</strong> Because AI outputs are probabilistic, you agree to review, verify, and validate all generated text, images, tags, and recommendations before publishing or using them in live business campaigns.</li>
+                        <li><strong>Prompts and Inputs:</strong> You warrant that inputs, URLs, and store media you submit to Infiera AI tools do not infringe on any third-party intellectual property or privacy rights.</li>
+                        <li><strong>Model Fine-Tuning:</strong> We do not sell your proprietary input data to third parties. Any platform operational data processing is conducted strictly to provide, protect, and optimize our software capabilities.</li>
+                    </ul>
+                </section>
+
+                <section id="acceptable-use" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">5. Acceptable Use Policy</h2>
+                    <p class="mb-3">You agree that you will NOT use Infiera AI tools or services to:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Violate any applicable local, national, or international law, rule, or regulatory guideline.</li>
+                        <li>Reverse engineer, decompile, disassemble, or attempt to extract the source code or underlying algorithms of our software or AI models.</li>
+                        <li>Engage in unauthorized web scraping, automated data mining, or bot activity outside of provided official API channels.</li>
+                        <li>Generate malicious, abusive, defamatory, deceptive, pornographic, fraudulent, or harassing content.</li>
+                        <li>Bypass rate limits, system security features, or artificial usage restrictions.</li>
+                        <li>Resell, white-label, or sublicense our software platform without an explicit written partnership agreement with Infiera AI.</li>
+                    </ul>
+                </section>
+
+                <section id="third-party-integrations" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">6. Third-Party Platforms & Integrations</h2>
+                    <p class="mb-3">Certain Infiera AI applications (such as PinVelocity AI) integrate with or generate content for third-party platforms, including Pinterest, Google, social media networks, and e-commerce platforms.</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>You acknowledge that Infiera AI is an independent software tool and is not affiliated with, sponsored by, or officially endorsed by Pinterest, Inc. or any other third-party provider unless explicitly stated.</li>
+                        <li>You are solely responsible for ensuring your account publishing behavior adheres to third-party terms of service, rate limits, anti-spam filters, and platform guidelines.</li>
+                    </ul>
+                </section>
+
+                <section id="billing-cancellation" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">7. Fees, Subscriptions, Billing & Refunds</h2>
+                    <p class="mb-3">Access to Infiera AI products requires a valid paid subscription or credit package.</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Recurring Subscriptions:</strong> Paid subscription plans automatically renew on a monthly or annual billing cycle unless canceled prior to the renewal date via your account settings dashboard.</li>
+                        <li><strong>Payment Processing:</strong> Payments are processed securely via third-party payment gateways (e.g., Stripe). By providing billing information, you authorize us to charge the applicable subscription fees to your payment method.</li>
+                        <li><strong>Refund Policy:</strong> Software fees are billed in advance and are generally non-refundable except where explicitly required by applicable law or stated in specific tier promotions.</li>
+                    </ul>
+                </section>
+
+                <section id="intellectual-property" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">8. Intellectual Property Rights</h2>
+                    <p class="mb-3">All software code, user interface designs, logos, brand assets, domain names, documentation, proprietary algorithms, and core architecture of Infiera AI products are the exclusive property of Infiera AI and its licensors.</p>
+                    <p>Nothing in these Terms grants you any title, copyright, trademark, or ownership interest in Infiera AI's underlying proprietary assets.</p>
+                </section>
+
+                <section id="disclaimer-warranties" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">9. Disclaimer of Warranties</h2>
+                    <p class="mb-3">OUR SERVICES, SOFTWARE, AND AI-GENERATED OUTPUTS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+                    <p>INFIERA AI DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT OUR SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.</p>
+                </section>
+
+                <section id="limitation-liability" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">10. Limitation of Liability</h2>
+                    <p class="mb-3">TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL INFIERA AI, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS GOODWILL) ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OUR SERVICES.</p>
+                    <p>OUR AGGREGATE TOTAL LIABILITY FOR ANY CLAIMS UNDER THESE TERMS SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU TO INFIERA AI IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM EVENT.</p>
+                </section>
+
+                <section id="indemnification" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">11. Indemnification</h2>
+                    <p>You agree to defend, indemnify, and hold harmless Infiera AI and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) arising out of or in any way connected with your breach of these Terms, your user content, or your misuse of our software tools.</p>
+                </section>
+
+                <section id="termination" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">12. Account Termination</h2>
+                    <p class="mb-3">We reserve the right to suspend, disable, or terminate your access to Infiera AI services at any time, with or without notice, if we reasonably believe you have violated these Terms, engaged in fraudulent activity, or posed a security risk to our system.</p>
+                    <p>You may cancel your account at any time through your subscription management settings.</p>
+                </section>
+
+                <section id="governing-law" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">13. Governing Law & Dispute Resolution</h2>
+                    <p class="mb-3">These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
+                    <p>Any disputes arising under or in connection with these Terms shall be resolved through good-faith negotiation, or, if unresolved, submitted to binding arbitration or competent courts in the jurisdiction of Infiera AI's primary business registration.</p>
+                </section>
+
+                <section id="modifications" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">14. Changes to Terms</h2>
+                    <p>We may modify or replace these Terms at any time. When updates are made, we will revise the "Last Updated" date at the top of this page. Your continued use of Infiera AI software after updated Terms take effect indicates your acceptance of the revised Terms.</p>
+                </section>
+
+                <section id="contact" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">15. Contact Information</h2>
+                    <p class="mb-4">If you have any questions, concerns, or legal inquiries regarding these Terms of Use, please reach out to our team:</p>
+                    
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3">
+                            <div class="text-slate-500 font-medium text-sm">Company Name:</div>
+                            <div class="sm:col-span-2 font-medium">[INSERT LEGAL COMPANY NAME]</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Legal Email:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="mailto:legal@infiera.ai">[INSERT LEGAL EMAIL]</a></div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Business Address:</div>
+                            <div class="sm:col-span-2">[INSERT BUSINESS ADDRESS]</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Website:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="#">[INSERT WEBSITE]</a></div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dynamic Last Updated Date
+            const today = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const lastUpdatedEl = document.getElementById('terms-last-updated');
+            if (lastUpdatedEl) {
+                lastUpdatedEl.textContent = today.toLocaleDateString('en-US', dateOptions);
+            }
+
+            // Intersection Observer for Sidebar Scroll Tracking
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'border-l-brand-500');
+                            link.classList.add('border-transparent');
+                        });
+                        
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active', 'border-l-brand-500');
+                            activeLink.classList.remove('border-transparent');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
