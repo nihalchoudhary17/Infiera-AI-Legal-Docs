@@ -1,193 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer | AI Infera</title>
+    <title>Disclaimer - Infiera AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-        .serif-text {
-            font-family: 'Lora', serif;
-        }
-        /* Smooth fade in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // AI Teal accent
+                            600: '#0d9488',
+                            900: '#134e4a',
+                            dark: '#0f172a' // Dark Slate for depth
+                        }
+                    }
+                }
             }
         }
-        /* Custom bullet style for legal points */
-        ul.legal-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
+    </script>
+    <style>
+        .toc-link.active {
+            color: #14b8a6;
+            font-weight: 600;
+            border-left-color: #14b8a6;
         }
-        ul.legal-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #9CA3AF; /* gray-400 */
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-[#FAFAF9] text-[#282828] antialiased selection:bg-gray-200 selection:text-black">
+<body class="font-sans antialiased bg-gray-50 text-slate-700 min-h-screen flex flex-col">
 
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <div class="bg-brand-dark text-white py-16 sm:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg class="absolute top-1/2 left-0 w-64 h-64 -translate-y-1/2 -translate-x-1/2 text-brand-500" fill="currentColor" viewBox="0 0 100 100">
+                <rect width="100" height="100" transform="rotate(45 50 50)"></rect>
+            </svg>
+        </div>
         
-        <!-- Header -->
-        <header class="mb-12 fade-in" style="animation-delay: 0.1s;">
-            <p class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Legal</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Disclaimer</h1>
-            <p class="text-gray-500 font-light">Effective Date: 15/12/2025</p>
-        </header>
-
-        <!-- Intro -->
-        <section class="mb-12 fade-in" style="animation-delay: 0.2s;">
-            <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                This Disclaimer applies to AI Infera, a simple multi-AI chatbot (“Service”). By using AI Infera, you agree to this Disclaimer in full. If you do not agree, please do not use the Service.
-            </p>
-        </section>
-
-        <hr class="border-gray-200 mb-12 fade-in" style="animation-delay: 0.3s;">
-
-        <!-- 1. General Information Only -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.3s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">1. General Information Only</h2>
-            <p class="text-gray-700 mb-3">AI Infera provides general informational responses only.</p>
-            <ul class="legal-list text-gray-700">
-                <li>The content generated is not advice.</li>
-                <li>The responses are not instructions or commands.</li>
-                <li>The outputs are not guarantees of accuracy, completeness, or results.</li>
-            </ul>
-            <p class="mt-4 text-sm text-gray-500 italic">All information is provided on an “as-is” basis.</p>
-        </section>
-
-        <!-- 2. No Professional Advice -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">2. No Professional Advice</h2>
-            <p class="text-gray-700 mb-4">AI Infera does not provide:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                <div class="bg-white p-3 border border-gray-100 rounded text-gray-700 text-sm">Business advice</div>
-                <div class="bg-white p-3 border border-gray-100 rounded text-gray-700 text-sm">Financial or investment advice</div>
-                <div class="bg-white p-3 border border-gray-100 rounded text-gray-700 text-sm">Legal advice</div>
-                <div class="bg-white p-3 border border-gray-100 rounded text-gray-700 text-sm">Medical or health advice</div>
-                <div class="bg-white p-3 border border-gray-100 rounded text-gray-700 text-sm">Tax or accounting advice</div>
-            </div>
-            <p class="text-gray-800 font-medium border-l-2 border-red-200 pl-3">You should always consult a qualified professional before making decisions in these areas.</p>
-        </section>
-
-        <!-- 3. No Decision-Making Responsibility -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">3. No Decision-Making Responsibility</h2>
-            <div class="mb-6">
-                <h3 class="text-md font-medium text-gray-800 mb-2">AI Infera:</h3>
-                <ul class="legal-list text-gray-700">
-                    <li>Does not make decisions for you.</li>
-                    <li>Does not tell you what you must do.</li>
-                    <li>Does not control your actions.</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-md font-medium text-gray-800 mb-2">You are solely responsible for:</h3>
-                <ul class="legal-list text-gray-700">
-                    <li>How you interpret responses.</li>
-                    <li>What actions you take.</li>
-                    <li>Any consequences that follow.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 4. Accuracy and Limitations -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">4. Accuracy and Limitations</h2>
-            <p class="text-gray-700 mb-3">AI-generated responses:</p>
-            <ul class="legal-list text-gray-700">
-                <li>May be incorrect, incomplete, or outdated.</li>
-                <li>May reflect limitations or errors in AI models.</li>
-                <li>Should not be relied upon as factual truth.</li>
-            </ul>
-            <p class="text-gray-800 mt-4 font-medium">You must independently verify important information.</p>
-        </section>
-
-        <!-- 5. Third-Party AI Models -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">5. Third-Party AI Models</h2>
-            <p class="text-gray-700 mb-3">AI Infera uses multiple third-party AI providers to generate responses.</p>
-            <ul class="legal-list text-gray-700">
-                <li>AI Infera does not control their internal logic or training data.</li>
-                <li>Each provider operates under its own terms and policies.</li>
-                <li>AI Infera is not responsible for third-party AI outputs.</li>
-            </ul>
-        </section>
-
-        <!-- 6. Limitation of Liability -->
-        <section class="mb-10 fade-in" style="animation-delay: 0.6s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">6. Limitation of Liability</h2>
-            <p class="text-gray-700 mb-2">To the maximum extent permitted by law:</p>
-            <ul class="legal-list text-gray-700">
-                <li>AI Infera is provided without warranties of any kind.</li>
-                <li>We are not liable for losses, damages, or harm.</li>
-                <li>This includes direct, indirect, incidental, or consequential damages.</li>
-            </ul>
-            <p class="mt-2 text-sm text-gray-500">This applies even if we were advised of the possibility of such damages.</p>
-        </section>
-
-        <!-- 7 & 8 Combined -->
-        <section class="mb-10 fade-in space-y-8" style="animation-delay: 0.6s;">
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">7. User Responsibility</h2>
-                <ul class="legal-list text-gray-700">
-                    <li>You use the Service at your own risk.</li>
-                    <li>You will not rely on responses as the sole basis for decisions.</li>
-                    <li>You will not hold AI Infera responsible for outcomes.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h2 class="text-xl font-semibold mb-3 text-gray-900">8. Changes to This Disclaimer</h2>
-                <p class="text-gray-700">This Disclaimer may be updated at any time. Continued use of AI Infera means you accept the updated version.</p>
-            </div>
-        </section>
-
-        <hr class="border-gray-200 mb-10 fade-in" style="animation-delay: 0.7s;">
-
-        <!-- 9. Contact -->
-        <section class="fade-in mb-16" style="animation-delay: 0.7s;">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900">9. Contact</h2>
-            <p class="text-gray-700 mb-2">If you have questions about this Disclaimer, you may contact:</p>
-            <a href="mailto:contact@nihalchoudhary.site" class="text-lg font-medium text-black border-b-2 border-transparent hover:border-black transition-all">
-                contact@nihalchoudhary.site
-            </a>
-        </section>
-
-        <!-- Summary Box -->
-        <div class="bg-[#F3F4F6] p-8 rounded-xl fade-in" style="animation-delay: 0.8s;">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Summary</h3>
-            <p class="text-gray-700 leading-relaxed">
-                AI Infera is just a multi-AI chatbot. It gives information, not advice. You decide what to do. We are not responsible for the results.
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-brand-500 font-semibold tracking-wide uppercase text-sm mb-4 block">Legal & Product Terms</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">Disclaimer</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light">
+                Important details regarding AI-generated content, results guarantees, third-party platform usage, and liability for Infiera AI products.
             </p>
         </div>
+    </div>
 
-        <div class="mt-16 text-center text-sm text-gray-400 font-light italic fade-in" style="animation-delay: 0.9s;">
-            AI Infera helps you work with AI in a simpler, more human way.
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row gap-12 relative">
+        
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="hidden lg:block w-64 shrink-0">
+            <div class="sticky top-12 max-h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar pr-4">
+                <h4 class="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-4">On This Page</h4>
+                <nav class="flex flex-col space-y-1 text-sm text-slate-600 border-l border-gray-200">
+                    <a href="#general-overview" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">1. General Overview</a>
+                    <a href="#ai-content-disclaimer" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">2. AI Output & Accuracy</a>
+                    <a href="#no-guarantees" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">3. Earnings & Performance</a>
+                    <a href="#third-party-platforms" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">4. Third-Party Platforms</a>
+                    <a href="#user-responsibility" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">5. User Verification</a>
+                    <a href="#ip-disclaimer" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">6. Intellectual Property</a>
+                    <a href="#no-professional-advice" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">7. No Professional Advice</a>
+                    <a href="#limitation-of-liability" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">8. Limitation of Liability</a>
+                    <a href="#changes-updates" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">9. Updates to Disclaimer</a>
+                    <a href="#contact-info" class="toc-link block pl-4 py-1.5 border-l-2 border-transparent hover:text-brand-600 hover:border-slate-300 transition-colors">10. Contact Us</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="flex-grow max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100 relative">
+            
+            <p class="text-sm text-slate-500 mb-8 border-b border-gray-100 pb-4">
+                <strong>Last Updated:</strong> <span id="disclaimer-last-updated">[DATE]</span>
+            </p>
+
+            <div class="space-y-8 text-slate-700 leading-relaxed">
+                
+                <!-- Section 1 -->
+                <section id="general-overview" class="scroll-mt-12">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">1. General Overview</h2>
+                    <p class="mb-3">This Disclaimer applies to all websites, applications, tools, software, and services owned or operated by Infiera AI ("Infiera AI," "we," "us," or "our"), including but not limited to PinVelocity AI and all future artificial intelligence business tools.</p>
+                    <p>By accessing or using any product, tool, or website offered by Infiera AI, you acknowledge that you have read, understood, and agreed to be bound by this Disclaimer. If you do not agree with any part of this Disclaimer, you must discontinue the use of our services immediately.</p>
+                </section>
+
+                <section id="ai-content-disclaimer" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">2. AI Output & Accuracy Disclaimer</h2>
+                    <p class="mb-3">Infiera AI products utilize advanced artificial intelligence models, machine learning algorithms, and third-party APIs to generate outputs such as marketing text, pin graphics, SEO titles, descriptions, recommendations, automated workflows, and content derived from user-provided URLs or prompts.</p>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg my-4 text-amber-900 text-sm">
+                        <strong>Important Notice:</strong> Artificial intelligence software outputs probabilistic generations. Content generated by our software may occasionally contain inaccuracies, factual errors, outdated information, unexpected formatting, or incomplete details.
+                    </div>
+
+                    <ul class="list-disc pl-6 space-y-2 mt-2">
+                        <li><strong>No Guarantee of Accuracy:</strong> We do not guarantee that AI-generated output is accurate, error-free, factual, up-to-date, or suitable for any specific objective.</li>
+                        <li><strong>Probabilistic Nature:</strong> AI outputs are automatically generated based on pattern recognition and training data. Outputs do not reflect the opinion, endorsement, or direct advice of Infiera AI.</li>
+                        <li><strong>Originality & Plagiarism:</strong> While AI models generate novel text sequences, Infiera AI cannot guarantee that generated outputs will be 100% unique or free from unintentional similarities to existing web content.</li>
+                    </ul>
+                </section>
+
+                <section id="no-guarantees" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">3. Earnings & Performance Disclaimer</h2>
+                    <p class="mb-3">Infiera AI provides productivity tools designed to assist businesses with workflow automation, content creation, and digital marketing effort efficiency.</p>
+                    <p class="mb-3"><strong>We make no earnings, traffic, or sales guarantees:</strong></p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Any references to potential reach, growth, impressions, SEO improvements, traffic, leads, conversions, or revenue are strictly illustrative estimates and should not be considered guaranteed outcomes.</li>
+                        <li>Individual results vary widely based on market conditions, niche competitiveness, user strategy, product quality, third-party platform algorithm changes, and consistent user execution.</li>
+                        <li>Past performance metrics or customer testimonials showcased on our marketing materials do not guarantee identical future results for other users.</li>
+                    </ul>
+                </section>
+
+                <section id="third-party-platforms" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">4. Third-Party Platforms & Affiliation Disclaimer</h2>
+                    <p class="mb-3">Certain Infiera AI tools (including PinVelocity AI) are built to generate content or assist with publishing strategies for third-party platforms such as Pinterest, Google, social media networks, or ecommerce channels.</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>No Official Endorsement:</strong> Infiera AI and PinVelocity AI are independent software products. Unless explicitly stated, Infiera AI is not affiliated with, endorsed by, sponsored by, or officially partnered with Pinterest, Inc. or any other third-party platform.</li>
+                        <li><strong>Compliance with Platform Rules:</strong> You are solely responsible for ensuring that all content created, scheduled, or published using Infiera AI tools complies with the Terms of Service, anti-spam policies, community guidelines, and API rules of the respective third-party platform.</li>
+                        <li><strong>Account Actions:</strong> Infiera AI is not responsible for any enforcement actions taken by third-party platforms against your accounts (such as account suspensions, shadows bans, or reach throttling) resulting from your publishing frequency, strategy, or content choice.</li>
+                    </ul>
+                </section>
+
+                <section id="user-responsibility" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">5. User Verification & Editing Responsibility</h2>
+                    <p class="mb-3">Infiera AI tools are designed as assistant tools to empower human operators, not fully autonomous replacements for human oversight.</p>
+                    <p>It is your sole responsibility to inspect, review, verify, edit, and approve all AI-generated content (including copy, graphics, keywords, and destination links) before making it public, sharing it with clients, or using it in commercial advertising campaigns.</p>
+                </section>
+
+                <section id="ip-disclaimer" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">6. Intellectual Property & Input Content Disclaimer</h2>
+                    <p class="mb-3">When using Infiera AI tools, you may provide inputs such as product URLs, store links, images, or brand text prompts.</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Input Rights:</strong> You represent and warrant that you own or have obtained all necessary licenses, permissions, and rights to upload, link, or submit any content or URLs to Infiera AI software.</li>
+                        <li><strong>Third-Party IP Infringement:</strong> You are responsible for ensuring that outputs generated using your prompts do not infringe upon third-party trademarks, copyrights, trade secrets, or rights of publicity.</li>
+                    </ul>
+                </section>
+
+                <section id="no-professional-advice" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">7. No Professional Advice Disclaimer</h2>
+                    <p>Information and outputs provided by Infiera AI software, customer support, or documentation do not constitute legal, financial, tax, or professional compliance advice. You should consult appropriate qualified professionals before taking actions based on information generated by our tools.</p>
+                </section>
+
+                <section id="limitation-of-liability" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">8. Limitation of Liability</h2>
+                    <p class="mb-3">To the maximum extent permitted by applicable law, Infiera AI, its directors, employees, partners, and suppliers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation:</p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Loss of profits, revenue, data, or business goodwill;</li>
+                        <li>Service interruptions or system downtime;</li>
+                        <li>Errors, bugs, or inaccuracies in AI model output;</li>
+                        <li>Actions taken by third-party social media or e-commerce platforms.</li>
+                    </ul>
+                </section>
+
+                <section id="changes-updates" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">9. Updates to This Disclaimer</h2>
+                    <p>We reserve the right to modify or replace this Disclaimer at any time without prior notice. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of our software or services following any updates constitutes acceptance of those changes.</p>
+                </section>
+
+                <section id="contact-info" class="scroll-mt-12 pt-6 border-t border-gray-100">
+                    <h2 class="text-2xl font-semibold text-brand-dark mb-4">10. Contact Us</h2>
+                    <p class="mb-4">If you have any questions, concerns, or inquiries regarding this Disclaimer, please reach out to us:</p>
+                    
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3">
+                            <div class="text-slate-500 font-medium text-sm">Company Name:</div>
+                            <div class="sm:col-span-2 font-medium">[INSERT LEGAL COMPANY NAME]</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Legal / Support Email:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="mailto:support@infiera.ai">[INSERT SUPPORT EMAIL]</a></div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-slate-200 pb-3 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Business Address:</div>
+                            <div class="sm:col-span-2">[INSERT BUSINESS ADDRESS]</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                            <div class="text-slate-500 font-medium text-sm">Website:</div>
+                            <div class="sm:col-span-2 text-brand-600"><a href="#">[INSERT WEBSITE]</a></div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </div>
-
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            
+            const lastUpdatedEl = document.getElementById('disclaimer-last-updated');
+            if (lastUpdatedEl) {
+                lastUpdatedEl.textContent = today.toLocaleDateString('en-US', dateOptions);
+            }
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'border-l-brand-500');
+                            link.classList.add('border-transparent');
+                        });
+                        
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active', 'border-l-brand-500');
+                            activeLink.classList.remove('border-transparent');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
