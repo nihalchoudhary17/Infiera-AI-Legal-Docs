@@ -1,163 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | AI Infera</title>
+    <title>Contact Us - Infiera AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-        .serif-text {
-            font-family: 'Lora', serif;
-        }
-        /* Smooth fade in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6', // AI Teal accent
+                            600: '#0d9488',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0f172a' // Slate Dark
+                        }
+                    }
+                }
             }
         }
-        /* Custom bullet style */
-        ul.custom-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
         }
-        ul.custom-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #9CA3AF; /* gray-400 */
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-[#FAFAF9] text-[#282828] antialiased selection:bg-gray-200 selection:text-black">
+<body class="font-sans antialiased bg-gray-50 text-slate-700 min-h-screen flex flex-col">
 
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <div class="bg-brand-dark text-white py-16 sm:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg class="absolute top-1/2 left-0 w-80 h-80 -translate-y-1/2 -translate-x-1/2 text-brand-500" fill="currentColor" viewBox="0 0 100 100">
+                <rect width="100" height="100" transform="rotate(45 50 50)"></rect>
+            </svg>
+        </div>
         
-        <!-- Header -->
-        <header class="mb-14 fade-in" style="animation-delay: 0.1s;">
-            <p class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Get in Touch</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Contact Us</h1>
-            <p class="text-xl text-gray-700 font-light leading-relaxed">
-                We’d love to hear from you. If you have a question, feedback, or suggestion, feel free to reach out.
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 font-semibold tracking-wide uppercase text-xs mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                Get in Touch
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                How Can We <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-teal-200">Help Your Business?</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                Have questions about PinVelocity AI or custom SaaS solutions? Reach out to our product, sales, or support engineering teams.
             </p>
-            <p class="mt-4 text-gray-600">Your thoughts help us make AI Infera better and more useful.</p>
-        </header>
+        </div>
+    </div>
 
-        <hr class="border-gray-200 mb-14 fade-in" style="animation-delay: 0.2s;">
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        <!-- How to Reach Us -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.3s;">
-            <h2 class="text-2xl font-semibold mb-6 text-gray-900">How to Reach Us</h2>
-            
-            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm mb-6 text-center md:text-left">
-                <p class="text-sm text-gray-500 uppercase mb-2 tracking-wide">Email Us At</p>
-                <a href="mailto:contact@nihalchoudhary.site" class="text-2xl md:text-3xl font-medium text-black hover:text-gray-600 transition-colors break-all">
-                    contact@nihalchoudhary.site
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-dark mb-2">Technical Support</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Need assistance with PinVelocity AI, account billing, or API integrations?
+                </p>
+                <a href="mailto:support@infiera.ai" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors gap-1">
+                    support@infiera.ai
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <p class="font-medium text-gray-900 mb-2">Please note:</p>
-                <ul class="custom-list text-gray-600">
-                    <li>We respond to general questions, feedback, and support-related messages.</li>
-                    <li>We may not be able to reply instantly, but we do read every message.</li>
-                </ul>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-dark mb-2">Sales & Enterprise</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Interested in custom volume tiers, team licenses, or specialized AI tools?
+                </p>
+                <a href="mailto:sales@infiera.ai" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors gap-1">
+                    sales@infiera.ai
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-dark mb-2">Legal & Privacy</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Inquiries regarding our Privacy Policy, Terms of Use, or compliance requests.
+                </p>
+                <a href="mailto:legal@infiera.ai" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors gap-1">
+                    legal@infiera.ai
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
             </div>
         </section>
 
-        <!-- What to Contact Us About -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.4s;">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h2 class="text-xl font-semibold mb-4 text-gray-900">What to Contact Us About</h2>
-                    <p class="text-gray-600 mb-4">You can contact us for:</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-gray-700">
-                            <span class="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
-                            Feedback or suggestions
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
-                            Reporting bugs or issues
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
-                            General questions about AI Infera
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
-                            Partnership or collaboration inquiries
-                        </li>
-                    </ul>
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-7 bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark mb-2">Send Us a Message</h2>
+                <p class="text-sm text-slate-600 mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
+
+                <div id="success-banner" class="hidden mb-6 p-4 rounded-xl bg-teal-50 border border-teal-200 text-teal-800 text-sm">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-brand-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Thank you! Your message has been received. Our team will contact you shortly.</span>
+                    </div>
                 </div>
 
-                <div>
-                    <h2 class="text-xl font-semibold mb-4 text-gray-900">What to Expect</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-gray-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Clear and honest responses</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-gray-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Respect for your time and privacy</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-gray-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">No spam, no unnecessary follow-ups</span>
-                        </li>
-                    </ul>
-                    <p class="mt-6 text-sm text-gray-500 italic border-l-2 border-gray-200 pl-3">
-                        "We aim to keep communication simple and helpful."
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">First Name *</label>
+                            <input type="text" id="first-name" required placeholder="Jane" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-all bg-gray-50/50">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Last Name *</label>
+                            <input type="text" id="last-name" required placeholder="Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-all bg-gray-50/50">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Work Email *</label>
+                            <input type="email" id="email" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-all bg-gray-50/50">
+                        </div>
+                        <div>
+                            <label for="product-interest" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Product / Topic *</label>
+                            <select id="product-interest" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-all bg-gray-50/50 text-slate-700">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="pinvelocity">PinVelocity AI</option>
+                                <option value="enterprise">Enterprise Custom AI</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing & Subscriptions</option>
+                                <option value="partnerships">Partnership Inquiries</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Your Message *</label>
+                        <textarea id="message" rows="5" required placeholder="Tell us how we can help your business..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition-all bg-gray-50/50"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                        <span>Send Message</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-brand-dark text-white p-8 rounded-2xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <h3 class="text-xl font-bold mb-6">Company Information</h3>
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 text-brand-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-semibold text-slate-400 uppercase">Entity Name</span>
+                                <span class="font-medium text-white">[INSERT LEGAL COMPANY NAME]</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 text-brand-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-semibold text-slate-400 uppercase">Business Address</span>
+                                <span class="font-medium text-white">[INSERT BUSINESS ADDRESS]</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 text-brand-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-semibold text-slate-400 uppercase">Support Hours</span>
+                                <span class="font-medium text-white">Monday – Friday: 9:00 AM – 6:00 PM EST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    <h4 class="font-bold text-brand-dark mb-2">Looking for Documentation?</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        Review our legal terms and operational guidelines for complete transparency on how we process data and deliver service guarantees.
                     </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <a href="index.html" class="px-3 py-1.5 bg-gray-100 hover:bg-brand-50 hover:text-brand-600 rounded-lg text-slate-700 font-medium transition-colors">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="px-3 py-1.5 bg-gray-100 hover:bg-brand-50 hover:text-brand-600 rounded-lg text-slate-700 font-medium transition-colors">Terms of Use</a>
+                        <a href="disclaimer.html" class="px-3 py-1.5 bg-gray-100 hover:bg-brand-50 hover:text-brand-600 rounded-lg text-slate-700 font-medium transition-colors">Disclaimer</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Important Note -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.5s;">
-            <div class="border border-gray-200 rounded-xl p-6 bg-white">
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Important Note</h3>
-                <p class="text-gray-600 mb-4">AI Infera is a self-serve AI chatbot. We do not provide:</p>
-                <div class="flex flex-col sm:flex-row gap-4 text-sm text-gray-500">
-                    <span class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        Personal consulting or professional advice
-                    </span>
-                    <span class="flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        Real-time or emergency support
-                    </span>
-                </div>
-                <p class="mt-4 text-xs text-gray-400 uppercase tracking-wide">For critical decisions, always rely on qualified professionals.</p>
+        <section class="space-y-8 pt-8 border-t border-gray-200">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-brand-600 font-semibold uppercase tracking-wider text-xs block mb-2">Quick Answers</span>
+                <h2 class="text-3xl font-bold text-brand-dark">Frequently Asked Questions</h2>
             </div>
-        </section>
 
-        <!-- Footer / Closing -->
-        <section class="fade-in text-center pt-8 border-t border-gray-200" style="animation-delay: 0.6s;">
-            <p class="serif-text text-xl text-gray-800 italic mb-2">
-                "In short: If you have something to share or ask, we’re listening."
-            </p>
-            <p class="text-gray-500">Just drop us an email.</p>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h3 class="font-semibold text-brand-dark text-base mb-2">How quickly does support respond?</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Our support team responds to most inquiries within 12 to 24 business hours. Priority support is available for enterprise plan tier members.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h3 class="font-semibold text-brand-dark text-base mb-2">Where can I manage my subscription for PinVelocity AI?</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">You can modify, upgrade, or cancel your subscription at any time directly through your account dashboard in the PinVelocity AI web application.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h3 class="font-semibold text-brand-dark text-base mb-2">Do you offer custom API integrations for enterprise clients?</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Yes. We build high-throughput custom AI workflows and API connections for e-commerce brands with larger product catalogs. Contact sales@infiera.ai to discuss specifications.</p>
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <footer class="bg-white border-t border-gray-100 py-12 text-sm text-slate-500 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-brand-dark text-base">Infiera AI</span>
+                <span class="text-slate-400">| Practical Software Solutions</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="about.html" class="hover:text-brand-600 transition-colors">About Us</a>
+                <a href="index.html" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-brand-600 transition-colors">Terms of Use</a>
+                <a href="disclaimer.html" class="hover:text-brand-600 transition-colors">Disclaimer</a>
+                <a href="contact.html" class="hover:text-brand-600 transition-colors font-medium text-brand-600">Contact Us</a>
+            </div>
+            <p class="text-xs text-slate-400">&copy; <span id="current-year">2026</span> Infiera AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            const contactForm = document.getElementById('contact-form');
+            const successBanner = document.getElementById('success-banner');
+
+            if (contactForm && successBanner) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Show client-side success banner
+                    successBanner.classList.remove('hidden');
+                    contactForm.reset();
+
+                    // Scroll to feedback banner smoothly
+                    successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
