@@ -1,186 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | AI Infera</title>
+    <title>About Us - Infiera AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Custom font settings for that 'writer' feel */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-        }
-        .serif-text {
-            font-family: 'Lora', serif;
-        }
-        /* Smooth fade in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6', // AI Teal accent
+                            600: '#0d9488',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            dark: '#0f172a' // Slate Dark
+                        }
+                    }
+                }
             }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #94a3b8;
         }
     </style>
 </head>
-<body class="bg-[#FAFAF9] text-[#282828] antialiased selection:bg-gray-200 selection:text-black">
+<body class="font-sans antialiased bg-gray-50 text-slate-700 min-h-screen flex flex-col">
 
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <div class="bg-brand-dark text-white py-20 sm:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg class="absolute top-1/2 left-0 w-80 h-80 -translate-y-1/2 -translate-x-1/2 text-brand-500" fill="currentColor" viewBox="0 0 100 100">
+                <rect width="100" height="100" transform="rotate(45 50 50)"></rect>
+            </svg>
+        </div>
         
-        <!-- Header -->
-        <header class="mb-16 fade-in" style="animation-delay: 0.1s;">
-            <p class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">About Us</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">AI Infera</h1>
-            <p class="text-lg text-gray-500 font-light">by Sonu Kumar Choudhary</p>
-        </header>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 font-semibold tracking-wide uppercase text-xs mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                About Infiera AI
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Empowering Businesses with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-teal-200">Practical AI Solutions</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                We build intelligent, purpose-driven software that eliminates operational friction, accelerates organic growth, and drives real revenue for modern businesses.
+            </p>
+        </div>
+    </div>
 
-        <!-- Intro -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.2s;">
-            <p class="text-xl leading-relaxed text-gray-700 mb-6 font-light">
-                If you’ve ever felt that AI tools are powerful but a little overwhelming, you’re not alone.
-            </p>
-            <p class="text-lg leading-relaxed text-gray-800 mb-6">
-                <strong>AI Infera was created to make AI feel simpler, calmer, and more human to use.</strong>
-            </p>
-            <p class="text-lg leading-relaxed text-gray-600">
-                Instead of jumping between multiple tools and tabs, AI Infera brings different AI models together in one place—so you can think clearly, explore ideas freely, and get answers without friction.
-            </p>
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <!-- Company Mission & Vision Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div>
+                    <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brand-dark mb-4">Our Mission</h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        At Infiera AI, our mission is to democratize advanced artificial intelligence into actionable, everyday software tools. We bridge the gap between complex AI technology and practical business execution.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Whether it’s automating visual pin creation for e-commerce, optimizing search engine reach, or simplifying marketing workflows, we build tools that produce direct, measurable growth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div>
+                    <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brand-dark mb-4">Our Vision</h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        We envision a landscape where business owners, growth teams, and entrepreneurs spend less time on tedious manual labor and more time on high-level strategy and creation.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Through specialized AI products built for specific commercial use cases, Infiera AI aims to become a trusted engine behind thousands of successful digital storefronts and brands worldwide.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <hr class="border-gray-200 mb-14 fade-in" style="animation-delay: 0.3s;">
+        <section class="bg-brand-dark text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold tracking-tight mb-3">Infiera AI by the Numbers</h2>
+                <p class="text-slate-400 font-light">Built for performance, scalability, and high-frequency business automation.</p>
+            </div>
 
-        <!-- Built for Real People -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.3s;">
-            <h2 class="text-2xl font-semibold mb-6 text-gray-900">Built for Real People</h2>
-            <p class="text-gray-600 mb-6">AI Infera is built for people who:</p>
-            <ul class="space-y-3 mb-8">
-                <li class="flex items-start">
-                    <span class="mr-3 text-gray-400 mt-1.5">•</span>
-                    <span class="text-gray-700">Are curious and like to explore ideas</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-gray-400 mt-1.5">•</span>
-                    <span class="text-gray-700">Want help thinking, writing, learning, or researching</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-gray-400 mt-1.5">•</span>
-                    <span class="text-gray-700">Prefer clarity over complexity</span>
-                </li>
-                <li class="flex items-start">
-                    <span class="mr-3 text-gray-400 mt-1.5">•</span>
-                    <span class="text-gray-700">Don’t want to “figure out” AI—just use it</span>
-                </li>
-            </ul>
-            <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
-                <p class="text-gray-800 font-medium text-center">
-                    You don’t need to be technical. You don’t need to know prompts. Just ask.
-                </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                    <div class="text-3xl sm:text-4xl font-black text-brand-400 mb-1">10M+</div>
+                    <div class="text-xs sm:text-sm text-slate-300">AI Outputs Generated</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                    <div class="text-3xl sm:text-4xl font-black text-brand-400 mb-1">50K+</div>
+                    <div class="text-xs sm:text-sm text-slate-300">Products & Links Processed</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                    <div class="text-3xl sm:text-4xl font-black text-brand-400 mb-1">99.9%</div>
+                    <div class="text-xs sm:text-sm text-slate-300">System Uptime</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                    <div class="text-3xl sm:text-4xl font-black text-brand-400 mb-1">20+</div>
+                    <div class="text-xs sm:text-sm text-slate-300">Global Markets Served</div>
+                </div>
             </div>
         </section>
 
-        <!-- Value Add -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.4s;">
-            <h2 class="text-2xl font-semibold mb-6 text-gray-900">How AI Infera Adds Value to Your Life</h2>
-            <p class="text-gray-600 mb-6">Our focus is not on features—it’s on experience.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div class="p-4 bg-gray-50 rounded border border-gray-100">
-                    <h3 class="font-medium text-gray-900 mb-1">Save time</h3>
-                    <p class="text-sm text-gray-600">Access multiple AI minds in one place</p>
-                </div>
-                <div class="p-4 bg-gray-50 rounded border border-gray-100">
-                    <h3 class="font-medium text-gray-900 mb-1">Perspective</h3>
-                    <p class="text-sm text-gray-600">See different angles on the same question</p>
-                </div>
-                <div class="p-4 bg-gray-50 rounded border border-gray-100">
-                    <h3 class="font-medium text-gray-900 mb-1">Thinking</h3>
-                    <p class="text-sm text-gray-600">Think better, not harder</p>
-                </div>
-                <div class="p-4 bg-gray-50 rounded border border-gray-100">
-                    <h3 class="font-medium text-gray-900 mb-1">Control</h3>
-                    <p class="text-sm text-gray-600">Stay in control of your decisions</p>
-                </div>
+        <section class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-brand-600 font-semibold uppercase tracking-wider text-xs block mb-2">Our Product Suite</span>
+                <h2 class="text-3xl font-bold text-brand-dark">Built for Real Business Impact</h2>
+                <p class="text-slate-600 mt-2">We engineer targeted AI tools tailored to solve specific commercial growth problems.</p>
             </div>
-            <p class="serif-text italic text-xl text-gray-600 border-l-4 border-gray-200 pl-4 py-1">
-                “It’s not about replacing your thinking. It’s about supporting it.”
-            </p>
-        </section>
 
-        <!-- Philosophy -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.5s;">
-            <h2 class="text-2xl font-semibold mb-6 text-gray-900">Our Philosophy</h2>
-            <p class="text-gray-600 mb-6">We believe good tools should:</p>
-            <ul class="space-y-2 mb-6">
-                <li class="flex items-center text-gray-700">
-                    <svg class="w-4 h-4 mr-3 text-green-600 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Feel simple
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <svg class="w-4 h-4 mr-3 text-green-600 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Respect your time
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <svg class="w-4 h-4 mr-3 text-green-600 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Reduce mental load
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <svg class="w-4 h-4 mr-3 text-green-600 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Work quietly in the background
-                </li>
-            </ul>
-            <p class="text-gray-800 font-medium">AI Infera is designed to assist, not overwhelm.</p>
-        </section>
+            <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-100 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold border border-brand-100">
+                        Featured Product
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-brand-dark">PinVelocity AI</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        PinVelocity AI is our flagship automation tool for e-commerce brands, marketers, and content creators. It transforms standard store URLs and product listings into eye-catching, SEO-optimized Pinterest visual pins and titles within seconds.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Automated URL parsing & image extraction</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>AI keyword extraction & SEO description writer</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Multi-format batch generator for scale</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- Evolution & Promise -->
-        <section class="mb-14 fade-in" style="animation-delay: 0.6s;">
-            <div class="bg-[#F3F4F6] p-8 rounded-xl">
-                <h2 class="text-xl font-semibold mb-4 text-gray-900">Always Improving, Always Respectful</h2>
-                <p class="text-gray-600 mb-4">
-                    AI Infera will continue to evolve. The design may change, features may improve, and the experience will get smoother.
-                </p>
-                <p class="text-gray-800 font-medium mb-8">
-                    Every update is made with one intention: to make the tool more useful for you.
-                </p>
-
-                <h3 class="text-lg font-semibold mb-3 text-gray-900">A Honest Promise</h3>
-                <p class="text-gray-600 mb-4">We won’t overpromise. We won’t force outcomes. We won’t complicate things.</p>
-                <p class="text-gray-600">AI Infera exists to give you access to AI in a way that feels helpful, respectful, and easy to trust.</p>
+                <div class="lg:col-span-5 bg-gradient-to-br from-brand-50 to-teal-100 p-8 rounded-xl border border-brand-100 flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-600 font-black text-2xl mb-4">
+                        PV
+                    </div>
+                    <h4 class="font-bold text-brand-dark text-lg mb-2">PinVelocity AI Engine</h4>
+                    <p class="text-xs text-slate-600 mb-6">Automate your visual search strategy and drive organic traffic on autopilot.</p>
+                    <span class="inline-block px-4 py-2 bg-brand-600 text-white font-medium text-xs rounded-lg shadow-sm">
+                        Active SaaS Product
+                    </span>
+                </div>
             </div>
         </section>
 
-        <!-- Closing & Contact -->
-        <section class="fade-in text-center" style="animation-delay: 0.7s;">
-            <h2 class="text-2xl font-bold mb-4 text-gray-900">We’re Glad You’re Here</h2>
-            <p class="text-gray-600 mb-8 max-w-lg mx-auto">
-                Whether you’re exploring, learning, writing, or just curious—AI Infera is here to support you along the way.
-                <br><br>
-                <span class="text-gray-900 font-medium">You bring the questions. We help you explore the answers.</span>
-            </p>
-
-            <div class="inline-block border-t border-b border-gray-200 py-8 px-4 w-full max-w-md">
-                <p class="text-sm uppercase tracking-wide text-gray-500 mb-2">Contact</p>
-                <p class="text-gray-700 mb-2">Have thoughts, feedback, or ideas?</p>
-                <a href="mailto:contact@nihalchoudhary.site" class="text-lg font-medium text-black border-b-2 border-transparent hover:border-black transition-all">
-                    contact@nihalchoudhary.site
-                </a>
+        <section class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-brand-600 font-semibold uppercase tracking-wider text-xs block mb-2">Core Principles</span>
+                <h2 class="text-3xl font-bold text-brand-dark">How We Build & Work</h2>
             </div>
 
-            <div class="mt-16 text-sm text-gray-400 font-light italic">
-                AI Infera helps you work with AI in a simpler, more human way.
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-lg mb-2">Speed & Utility</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">We prioritize actionable speed and reliable outputs over complex gimmicks that don't add real business value.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-lg mb-2">Data Privacy</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Your data security comes first. We never sell proprietary business input data to third parties.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-lg mb-2">Human Control</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Our AI tools serve as smart co-pilots, keeping human strategic decision-making at the center of all workflows.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-lg mb-2">Continuous Iteration</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">We constantly update models and algorithms to ensure peak compatibility with evolving online platforms.</p>
+                </div>
             </div>
         </section>
 
     </main>
 
+    <footer class="bg-white border-t border-gray-100 py-12 text-sm text-slate-500 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-brand-dark text-base">Infiera AI</span>
+                <span class="text-slate-400">| Practical Software Solutions</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="about.html" class="hover:text-brand-600 transition-colors">About Us</a>
+                <a href="index.html" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
+                <a href="terms-of-service.html" class="hover:text-brand-600 transition-colors">Terms of Use</a>
+                <a href="disclaimer.html" class="hover:text-brand-600 transition-colors">Disclaimer</a>
+            </div>
+            <p class="text-xs text-slate-400">&copy; <span id="current-year">2026</span> Infiera AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>
